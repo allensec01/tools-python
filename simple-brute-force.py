@@ -1,6 +1,5 @@
 import requests
 
-            
 url = "http://192.168.254.129/DVWA/vulnerabilities/brute/"
 with open("pasword.txt") as file:
     password_lst = [line.strip() for line in file]
